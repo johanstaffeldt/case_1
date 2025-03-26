@@ -100,8 +100,7 @@ rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 for _ in tqdm(range(1), desc="Fitting Random Forest model"):
     rf_model.fit(X_train_rfe, y_train)
 
-# Predict with Random Forest
-rf_y_pred = rf_model.predict(X_test_rfe)
+# Predict with Random Forest rf_y_pred = rf_model.predict(X_test_rfe)
 
 # Calculate RMSE for Random Forest
 rf_rmse = np.sqrt(np.mean((y_test - rf_y_pred)**2))
